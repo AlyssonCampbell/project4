@@ -1,0 +1,14 @@
+#gamePiece {
+  background-color: black;
+  height: 100px;
+  width: 100px;
+}
+
+.target {
+  background-color: purple;
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  padding-left: 100px;
+  position: fixed;
+}

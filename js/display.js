@@ -9,21 +9,30 @@ $(document).ready(_ => {
   generateRandomDivs();
   checkWinner(score);
 });
-
+//hard code to check what happens when two overlay-check click behavior
+//currently one div at a time dissapears
 function generateRandomDivs() {
-  let width = $(window).width() - 100;
   let height = $(window).height() - 100;
+  let width = $(window).width() - 100;
   for (let i in divs) {
-    let randomWidth = Math.floor(Math.random() * width);
     let randomHeight = Math.floor(Math.random() * height);
+    let randomWidth = Math.floor(Math.random() * width);
     $(`<div class='target' id="${i}"></div>`).appendTo(".game-board").css({
-      left: randomWidth,
-      top: randomHeight
+      top: randomHeight,
+      left: randomWidth
     });
-    // animateDivs();
+    animateDivs(width, height, i);
   }
+
 }
 
-// function animateDivs(){
-//   $()
-// }
+function animateDivs(width, height, i) {
+  let newHeight = Math.floor(Math.random() * height);
+  let newWidth = Math.floor(Math.random() * width);
+  console.log("new height: " + newHeight);
+  console.log("new width: " + newWidth);
+  $(`#${i}`).animate({
+    top: newHeight,
+    left: newWidth
+  }, 2000);
+};

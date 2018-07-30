@@ -2,17 +2,10 @@
 //https://www.kirupa.com/html5/handling_events_for_many_elements.htm
 //https://stackoverflow.com/questions/41420075/jquery-move-div-around-screen
 //https://stackoverflow.com/questions/13784686/moving-an-image-randomly-around-a-page
-// https: //tomelliott.com/jquery/tutorial-simple-jquery-bouncing-ball
+//https: //tomelliott.com/jquery/tutorial-simple-jquery-bouncing-ball
+//suggestion from mentor to add a callback
 
   let score = 0;
-// let divs = [0, 1, 2, 3, 4];
-
-// $(document).ready(_ => {
-//   for (let i in divs) {
-//     $(".game-board").append(`<div class='target' id="${i}"></div>`);
-//   }
-//   checkWinner(score);
-// })
 
 //listen to the game board and if the div clicked is one of the id divs within the array, log a point and remove
 $(".game-board").on("click", evt => {

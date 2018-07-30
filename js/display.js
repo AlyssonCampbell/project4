@@ -3,19 +3,16 @@
 //https://stackoverflow.com/questions/10385950/how-to-get-a-div-to-randomly-move-around-a-page-using-jquery-or-css
 //https://www.w3schools.com/jquery/jquery_animate.asp
 
-let divs = [0, 1, 2, 3, 4];
-
 $(document).ready(_ => {
-  generateRandomDivs();
-  checkWinner(score);
-  moveDivs();
-
+  let divs = [0, 1, 2, 3, 4];
+  let height = $(window).height() - 100;
+  let width = $(window).width() - 100;
+  generateRandomDivs(height, width, divs);
+  checkWinner(score, divs);
 });
 //hard code to check what happens when two overlay-check click behavior
 //currently one div at a time dissapears
-function generateRandomDivs() {
-  let height = $(window).height() - 100;
-  let width = $(window).width() - 100;
+function generateRandomDivs(height, width, divs) {
   for (let i in divs) {
     let randomHeight = Math.floor(Math.random() * height);
     let randomWidth = Math.floor(Math.random() * width);
@@ -23,23 +20,19 @@ function generateRandomDivs() {
       top: randomHeight,
       left: randomWidth
     });
+    moveDivs();
   }
 }
 
 function moveDivs() {
-  // let height = $(window).height() - 100;
-  // let width = $(window).width() - 100;
-  setInterval(animateDivs, 2000);
+  setInterval(animateDivs, 1000);
 };
-// moveDivs();
 
 function animateDivs(width, height) {
   height = $(window).height() - 100;
   width = $(window).width() - 100;
   let newHeight = Math.floor(Math.random() * height);
   let newWidth = Math.floor(Math.random() * width);
-  console.log("new height: " + newHeight);
-  console.log("new width: " + newWidth);
   $(".target").animate({
     top: newHeight,
     left: newWidth

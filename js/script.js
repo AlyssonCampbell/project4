@@ -5,7 +5,7 @@
 //https: //tomelliott.com/jquery/tutorial-simple-jquery-bouncing-ball
 //suggestion from mentor to add a callback
 
-  let score = 0;
+let score = 0;
 
 //listen to the game board and if the div clicked is one of the id divs within the array, log a point and remove
 $(".game-board").on("click", evt => {
@@ -23,11 +23,11 @@ function checkLocation(evt, array) {
       score++;
     }
   }
-  checkWinner();
+  checkWinner(divs);
 }
 
 //if score = divs.length then give game over
-function checkWinner() {
+function checkWinner(divs) {
   if (parseInt(score) === divs.length) {
     console.log("you won!");
   }

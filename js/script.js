@@ -5,10 +5,11 @@
 // https://www.quora.com/How-do-you-make-one-div-layer-show-over-another-in-HTML-CSS
 // https://www.w3schools.com/graphics/game_obstacles.asp
 
-$("#gamePiece").on("click", evt => {
+$(".target").on("click", evt => {
   evt.preventDefault();
   console.log("clicked!");
-  $("#gamePiece").animate({
-    "marginTop": "+=20px"
-  });
+  // $("#gamePiece").animate({
+  //   "marginTop": "+=30px"
+  // });
+  $("div").remove();
 });

@@ -11,6 +11,7 @@ start game button
 ability to move a game piece around using the wsad keys
 something hides the items that need to be collected
 the score tracks how many have been gathered
+through experimentation over the weekend decided to change how I was approaching the interface, Switching from collision detection to mobile-first interfacing where the object needs to be clicked instead of moving an object to detect collision-defintely something I'd like to learn more about in the future
 
 silver:
 timer option for catching as many items in a certian time

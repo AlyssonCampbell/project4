@@ -11,8 +11,8 @@ body {
 }
 
 @keyframes flash {
-  100% {
-    background-color: transparent;
+  0% {
+    background-color: rgb(195, 245, 59);
   }
   25% {
     background-color: rgba(195, 245, 59, 0.25);
@@ -23,7 +23,7 @@ body {
   75% {
     background-color: rgba(195, 245, 59, 0.75);
   }
-  0% {
-    background-color: rgb(195, 245, 59);
+  100% {
+    background-color: transparent;
   }
 }

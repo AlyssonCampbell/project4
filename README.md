@@ -17,6 +17,7 @@ silver:
 timer option for catching as many items in a certian time
 cool look
 jar fills up with the caught items?
+set difficulty easy/medium/hard makes more fireflies and smaller for each difficulty
 
 gold:
 

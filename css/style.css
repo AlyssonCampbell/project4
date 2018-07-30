@@ -1,15 +1,6 @@
-/* #gamePiece {
-  background-color: black;
-  height: 100px;
-  width: 100px;
-  position: relative;
-  z-index: 10;
-} */
-
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
-
 .target {
   background-color: purple;
+  position: absolute;
   height: 50px;
   width: 50px;
   margin-top: 10px;

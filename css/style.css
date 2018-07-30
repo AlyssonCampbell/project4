@@ -1,7 +1,30 @@
+body {
+  background-color: rgb(33, 19, 95);
+}
+
 .target {
-  background-color: purple;
+  border-radius: 50px;
   position: absolute;
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   margin-top: 10px;
+  animation: flash 2.5s alternate infinite;
+}
+
+@keyframes flash {
+  100% {
+    background-color: transparent;
+  }
+  25% {
+    background-color: rgba(195, 245, 59, 0.25);
+  }
+  50% {
+    background-color: rgba(195, 245, 59, 0.50);
+  }
+  75% {
+    background-color: rgba(195, 245, 59, 0.75);
+  }
+  0% {
+    background-color: rgb(195, 245, 59);
+  }
 }

@@ -3,6 +3,7 @@
 // https://stackoverflow.com/questions/1402698/binding-arrow-keys-in-js-jquery
 // https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection
 // https://www.quora.com/How-do-you-make-one-div-layer-show-over-another-in-HTML-CSS
+// https://www.w3schools.com/graphics/game_obstacles.asp
 
 $("#gamePiece").on("click", evt => {
   evt.preventDefault();

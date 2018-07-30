@@ -2,13 +2,16 @@
   background-color: black;
   height: 100px;
   width: 100px;
+  z-index: 8;
 }
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
 
 .target {
   background-color: purple;
   height: 50px;
   width: 50px;
-  margin-top: 10px;
   padding-left: 100px;
-  position: fixed;
+  position: absolute;
+  z-index: -1;
 }

@@ -5,25 +5,22 @@ body {
 .target {
   border-radius: 50px;
   position: absolute;
-  height: 40px;
-  width: 40px;
-  animation: flash 2.5s alternate infinite;
+  height: 50px;
+  width: 50px;
+  animation: flash 3.5s infinite;
 }
 
 @keyframes flash {
+  100% {
+    background-color: transparent;
+  }
   0% {
     background-color: rgb(195, 245, 59);
   }
-  25% {
-    background-color: rgba(195, 245, 59, 0.25);
+  0% {
+    background-color: rgb(195, 245, 59);
   }
-  50% {
-    background-color: rgba(195, 245, 59, 0.50);
-  }
-  75% {
-    background-color: rgba(195, 245, 59, 0.75);
-  }
-  100% {
-    background-color: transparent;
+  0% {
+    background-color: rgb(195, 245, 59);
   }
 }

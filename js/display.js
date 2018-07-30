@@ -2,7 +2,7 @@
 //https://stackoverflow.com/questions/10385950/how-to-get-a-div-to-randomly-move-around-a-page-using-jquery-or-css
 //https://www.w3schools.com/jquery/jquery_animate.asp
 //https://www.w3schools.com/jsref/met_win_setinterval.asp
-let divs = [0, 1, 2, 3, 4, 5, 6, 7];
+let divs = [0, 1, 2, 3, 4];
 //reads the window size to set the max area to move items within
 $(document).ready(_ => {
   let height = $(window).height() - 100;

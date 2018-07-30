@@ -1,5 +1,4 @@
-//setting div randomly in page
-//http://archive.oreilly.com/oreillyschool/courses/jquery/QuizzesAndProjects/Viewport_proj2.project.html
+//setting div randomly in page: http://archive.oreilly.com/oreillyschool/courses/jquery/QuizzesAndProjects/Viewport_proj2.project.html
 //https://stackoverflow.com/questions/10385950/how-to-get-a-div-to-randomly-move-around-a-page-using-jquery-or-css
 //https://www.w3schools.com/jquery/jquery_animate.asp
 //https://www.w3schools.com/jsref/met_win_setinterval.asp

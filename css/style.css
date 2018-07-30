@@ -1,14 +1,10 @@
-body {
-  z-index: auto;
-}
-
-#gamePiece {
+/* #gamePiece {
   background-color: black;
   height: 100px;
   width: 100px;
   position: relative;
   z-index: 10;
-}
+} */
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/z-index */
 
@@ -16,7 +12,5 @@ body {
   background-color: purple;
   height: 50px;
   width: 50px;
-  padding-left: 100px;
-  position: absolute;
-  z-index: -1;
+  margin-top: 10px;
 }

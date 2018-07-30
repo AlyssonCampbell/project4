@@ -8,6 +8,8 @@ let divs = [0, 1, 2, 3, 4];
 $(document).ready(_ => {
   generateRandomDivs();
   checkWinner(score);
+  moveDivs();
+
 });
 //hard code to check what happens when two overlay-check click behavior
 //currently one div at a time dissapears
@@ -21,17 +23,24 @@ function generateRandomDivs() {
       top: randomHeight,
       left: randomWidth
     });
-    animateDivs(width, height, i);
   }
-
 }
 
-function animateDivs(width, height, i) {
+function moveDivs() {
+  // let height = $(window).height() - 100;
+  // let width = $(window).width() - 100;
+  setInterval(animateDivs, 2000);
+};
+// moveDivs();
+
+function animateDivs(width, height) {
+  height = $(window).height() - 100;
+  width = $(window).width() - 100;
   let newHeight = Math.floor(Math.random() * height);
   let newWidth = Math.floor(Math.random() * width);
   console.log("new height: " + newHeight);
   console.log("new width: " + newWidth);
-  $(`#${i}`).animate({
+  $(".target").animate({
     top: newHeight,
     left: newWidth
   }, 2000);

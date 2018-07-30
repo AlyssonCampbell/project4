@@ -2,9 +2,10 @@
 //http://archive.oreilly.com/oreillyschool/courses/jquery/QuizzesAndProjects/Viewport_proj2.project.html
 //https://stackoverflow.com/questions/10385950/how-to-get-a-div-to-randomly-move-around-a-page-using-jquery-or-css
 //https://www.w3schools.com/jquery/jquery_animate.asp
+let divs = [0, 1, 2, 3, 4];
 
 $(document).ready(_ => {
-  let divs = [0, 1, 2, 3, 4];
+
   let height = $(window).height() - 100;
   let width = $(window).width() - 100;
   generateRandomDivs(height, width, divs);
@@ -29,12 +30,14 @@ function moveDivs() {
 };
 
 function animateDivs(width, height) {
-  height = $(window).height() - 100;
-  width = $(window).width() - 100;
-  let newHeight = Math.floor(Math.random() * height);
-  let newWidth = Math.floor(Math.random() * width);
-  $(".target").animate({
-    top: newHeight,
-    left: newWidth
-  }, 2000);
+  for (let i = 0; i < divs.length; i++) {
+    height = $(window).height() - 100;
+    width = $(window).width() - 100;
+    let newHeight = Math.floor(Math.random() * height);
+    let newWidth = Math.floor(Math.random() * width);
+    $(`#${i}`).animate({
+      top: newHeight,
+      left: newWidth
+    }, 2000);
+  }
 };

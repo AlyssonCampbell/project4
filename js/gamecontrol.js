@@ -5,6 +5,7 @@
 //https://tomelliott.com/jquery/tutorial-simple-jquery-bouncing-ball
 let score = 0;
 let divs = [];
+let time = 0
 //loads start modal when page loads
 $(document).ready(_ => {
   $("#startGame").show();
@@ -16,7 +17,8 @@ function startTheGame() {
   let height = $(window).height() - 100;
   let width = $(window).width() - 100;
   generateRandomDivs(height, width, divs);
-  checkWinner(score, divs);
+  let timer = setInterval(startTimer, 1000);
+  checkWinner(divs, timer);
   moveDivs();
 };
 //gets the number of fireflies based on which difficulty was selected
@@ -64,11 +66,19 @@ function checkLocation(evt, array) {
   checkWinner(divs);
 };
 //if score = divs.length then give game over
-function checkWinner(divs) {
+function checkWinner(divs, timer) {
   if (parseInt(score) === divs.length) {
+    let timeTotal = time;
     $("#endGame").show();
     $(".score").html(`${score}`);
+    $(".clock").html(`${timeTotal}`);
+    removeTimer();
   };
 };
-//TODO: create a timer that displays the total time it took to catch all the fireflies when displaying the winner
+//removes the timer display
+function removeTimer() {
+  $(".timer").remove();
+};
+
+//TODO: add function that converts the seconds to minutes if over a certian time
 //TODO: create a free-for-all mode that continually adds a firefly per set interval and the total time is set, game over when timer hits 0

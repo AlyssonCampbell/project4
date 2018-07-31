@@ -45,3 +45,9 @@ function animateDivs() {
 
 //create function that increases the time to the html to display the timer, also keep track
 //of the total time when all the fireflies are caught to display on the game over modal
+// let time = 0
+
+function startTimer() {
+  time = time + 1;
+  $(".timer").html(time);
+}

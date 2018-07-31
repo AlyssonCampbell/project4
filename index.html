@@ -17,26 +17,27 @@
     <div class="modal-content">
       <p>Ready to catch some fireflies?</p>
       <!-- button to start game -->
-      <button type="submit" id="start">Start!</button>
+      <button type="submit" class="start">Start!</button>
     </div>
   </div>
   <!-- modal for game end -->
   <div id="endGame" class="modal">
     <!-- close -->
-    <span class="close">&times;</span>
+    <span class="close restart">&times;</span>
     <!-- start modal content -->
     <div class="modal-content">
-      <p>Total score:
+      <p>You caught all
         <span class="score"></span>
+        fireflies! Good job!
       </p>
       <!-- button to start game -->
-      <button type="submit" id="start">Play Again?</button>
+      <button type="submit" class="restart">Play Again?</button>
     </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <script src="js/script.js"></script>
+  <script src="js/gamecontrol.js"></script>
   <script src="js/display.js"></script>
 </body>
 

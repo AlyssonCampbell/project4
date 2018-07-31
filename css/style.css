@@ -49,6 +49,7 @@ body {
 }
 
 /* close button on modal*/
+
 .close {
   position: absolute;
   top: 15px;
@@ -64,3 +65,5 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* TODO: add button styling */

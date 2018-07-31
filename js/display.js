@@ -42,3 +42,6 @@ function animateDivs() {
 //   let randomWidth = Math.floor(Math.random() * width);
 //   return randomHeight, randomWidth;
 // }
+
+//create function that increases the time to the html to display the timer, also keep track
+//of the total time when all the fireflies are caught to display on the game over modal

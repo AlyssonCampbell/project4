@@ -7,7 +7,6 @@
 //currently one div at a time dissapears
 //generates the divs in a random location to start
 function generateRandomDivs(height, width, divs) {
-  console.log(divs);
   for (let i in divs) {
     let randomHeight = Math.floor(Math.random() * height);
     let randomWidth = Math.floor(Math.random() * width);

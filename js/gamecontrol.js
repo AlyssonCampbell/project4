@@ -2,7 +2,7 @@
 //https://www.kirupa.com/html5/handling_events_for_many_elements.htm
 //https://stackoverflow.com/questions/41420075/jquery-move-div-around-screen
 //https://stackoverflow.com/questions/13784686/moving-an-image-randomly-around-a-page
-//https: //tomelliott.com/jquery/tutorial-simple-jquery-bouncing-ball
+//https://tomelliott.com/jquery/tutorial-simple-jquery-bouncing-ball
 let score = 0;
 let divs = [];
 //loads start modal when page loads
@@ -31,15 +31,15 @@ function chooseDifficulty() {
     if (evt.target === easy) {
       let setDivs = 5;
       setNumberOfDivs(setDivs);
-      startTheGame()
+      startTheGame();
     } else if (evt.target === medium) {
       let setDivs = 10;
       setNumberOfDivs(setDivs);
-      startTheGame()
+      startTheGame();
     } else if (evt.target === hard) {
       let setDivs = 15;
       setNumberOfDivs(setDivs);
-      startTheGame()
+      startTheGame();
     };
   });
 };

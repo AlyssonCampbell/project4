@@ -2,30 +2,10 @@
 //https://stackoverflow.com/questions/10385950/how-to-get-a-div-to-randomly-move-around-a-page-using-jquery-or-css
 //https://www.w3schools.com/jquery/jquery_animate.asp
 //https://www.w3schools.com/jsref/met_win_setinterval.asp
-let divs = [];
 //reads the window size to set the max area to move items within
 //hard code to check what happens when two overlay-check click behavior
 //currently one div at a time dissapears
 //generates the divs in a random location to start
-function setNumberOfDivs(value) {
-  for (let i = 0; i < value; i++) {
-    divs.push(i);
-  }
-}
-//sets the difficulty of the game
-$(".difficulty").on("click", evt => {
-  if (evt.target === easy) {
-    let setDivs = 5;
-    setNumberOfDivs(setDivs);
-  } else if (evt.target === medium) {
-    let setDivs = 7;
-    setNumberOfDivs(setDivs);
-  } else if (evt.target === hard) {
-    let setDivs = 10;
-    setNumberOfDivs(setDivs);
-  }
-});
-
 function generateRandomDivs(height, width, divs) {
   console.log(divs);
   for (let i in divs) {
@@ -35,8 +15,8 @@ function generateRandomDivs(height, width, divs) {
       top: randomHeight,
       left: randomWidth
     });
-  }
-}
+  };
+};
 //moves the divs on an interval
 function moveDivs() {
   setInterval(animateDivs, 2000);
@@ -52,7 +32,7 @@ function animateDivs() {
       top: newHeight,
       left: newWidth
     }, 3000);
-  }
+  };
 };
 
 //TODO:not yet working-would like to pull this function out so that I can DRY up the code

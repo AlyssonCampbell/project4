@@ -2,7 +2,7 @@
 //https://stackoverflow.com/questions/10385950/how-to-get-a-div-to-randomly-move-around-a-page-using-jquery-or-css
 //https://www.w3schools.com/jquery/jquery_animate.asp
 //https://www.w3schools.com/jsref/met_win_setinterval.asp
-let divs = [0, 1, 2, 3, 4];
+let divs = [2, 1, 7, 3, 4];
 //reads the window size to set the max area to move items within
 //hard code to check what happens when two overlay-check click behavior
 //currently one div at a time dissapears

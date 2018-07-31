@@ -4,7 +4,6 @@ body {
   text-align: center;
   font-size: 4em;
   background-color: #141033;
-  /* background-size: ; */
 }
 
 .target {
@@ -49,8 +48,7 @@ body {
   background: linear-gradient(#141033, #3A2696, #6A2F8D, #C222A6);
 }
 
-/* close button */
-
+/* close button on modal*/
 .close {
   position: absolute;
   top: 15px;

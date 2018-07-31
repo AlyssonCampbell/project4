@@ -4,7 +4,6 @@
 //https://stackoverflow.com/questions/13784686/moving-an-image-randomly-around-a-page
 //https: //tomelliott.com/jquery/tutorial-simple-jquery-bouncing-ball
 //suggestion from mentor to add a callback
-
 let score = 0;
 //loads start modal when page loads
 $(document).ready(_ => {
@@ -44,8 +43,14 @@ function checkLocation(evt, array) {
   checkWinner(divs);
 }
 //if score = divs.length then give game over
+//TODO: add the number of fireflies caught to the html
 function checkWinner(divs) {
   if (parseInt(score) === divs.length) {
     $("#endGame").show();
   }
 }
+//TODO: create a timer that displays the total time it took to catch all the fireflies when displaying the winner
+//TODO: create a free-for-all mode that continually adds a firefly per set interval and the total time is set, game over when timer hits 0
+
+//TODO: set up easy medium hard buttons that will determine the difficulty of the game
+//

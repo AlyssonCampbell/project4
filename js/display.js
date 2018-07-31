@@ -43,11 +43,10 @@ function animateDivs() {
 //   return randomHeight, randomWidth;
 // }
 
-//create function that increases the time to the html to display the timer, also keep track
-//of the total time when all the fireflies are caught to display on the game over modal
-// let time = 0
-
+//create function that increases the time to the html to display the timer
 function startTimer() {
   time = time + 1;
   $(".timer").html(time);
 }
+
+//TODO: create a free-for-all mode that continually adds a firefly per set interval and the total time is set, game over when timer hits 0

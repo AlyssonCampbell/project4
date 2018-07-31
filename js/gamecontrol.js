@@ -51,7 +51,7 @@ $(".game-board").on("click", evt => {
   checkLocation(evt, divs);
 });
 //listen for click to remove modal
-$(".restart").on("click", evt => {
+$(".restart").on("click", _ => {
   location.reload();
 });
 //pull out function to check if location clicked was a div for scoring:
@@ -66,7 +66,7 @@ function checkLocation(evt, array) {
   checkWinner(divs);
 };
 //if score = divs.length then give game over
-function checkWinner(divs, timer) {
+function checkWinner(divs) {
   if (parseInt(score) === divs.length) {
     let timeTotal = time;
     $("#endGame").show();
@@ -81,4 +81,7 @@ function removeTimer() {
 };
 
 //TODO: add function that converts the seconds to minutes if over a certian time
-//TODO: create a free-for-all mode that continually adds a firefly per set interval and the total time is set, game over when timer hits 0
+//TODO: make a function that gives a timed mode new fireflies on an interval
+// function addMoreDivs() {
+//   console.log(divs);
+// };

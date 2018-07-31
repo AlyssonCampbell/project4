@@ -5,12 +5,17 @@
 let divs = [0, 1, 2, 3, 4];
 //reads the window size to set the max area to move items within
 $(document).ready(_ => {
+  $("#startGame").show();
+});
+
+$("#start").on("click", evt => {
+  $("#startGame").hide();
   let height = $(window).height() - 100;
   let width = $(window).width() - 100;
   generateRandomDivs(height, width, divs);
   checkWinner(score, divs);
   moveDivs();
-});
+})
 //hard code to check what happens when two overlay-check click behavior
 //currently one div at a time dissapears
 //generates the divs in a random location to start
@@ -41,3 +46,12 @@ function animateDivs() {
     }, 3000);
   }
 };
+
+//TODO:not yet working-would like to pull this function out so that I can DRY up the code
+// function getRandomLocation() {
+//   let height = $(window).height() - 100;
+//   let width = $(window).width() - 100;
+//   let randomHeight = Math.floor(Math.random() * height);
+//   let randomWidth = Math.floor(Math.random() * width);
+//   return randomHeight, randomWidth;
+// }

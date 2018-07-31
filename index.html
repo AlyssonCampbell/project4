@@ -11,6 +11,29 @@
 
 <body>
   <div class="game-board"></div>
+  <!-- modal for start game -->
+  <div id="startGame" class="modal">
+    <!-- start modal content -->
+    <div class="modal-content">
+      <p>Ready to catch some fireflies?</p>
+      <!-- button to start game -->
+      <button type="submit" id="start">Start!</button>
+    </div>
+  </div>
+  <!-- modal for game end -->
+  <div id="endGame" class="modal">
+    <!-- close -->
+    <span class="close">&times;</span>
+    <!-- start modal content -->
+    <div class="modal-content">
+      <p>Total score:
+        <span class="score"></span>
+      </p>
+      <!-- button to start game -->
+      <button type="submit" id="start">Play Again?</button>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
@@ -18,3 +41,5 @@
 </body>
 
 </html>
+
+<!-- got modal from https://www.w3schools.com/howto/howto_css_modals.asp -->

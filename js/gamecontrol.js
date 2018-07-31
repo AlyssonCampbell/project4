@@ -64,7 +64,6 @@ function checkLocation(evt, array) {
   checkWinner(divs);
 };
 //if score = divs.length then give game over
-//TODO: add the number of fireflies caught to the html
 function checkWinner(divs) {
   if (parseInt(score) === divs.length) {
     $("#endGame").show();

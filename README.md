@@ -27,3 +27,6 @@ make an object (div?) that can be moved around the screen with the keys
 have other objects randomly generate and bounce around the screen until they collide with the movable object
 when the two objects collide then increase the score
 have a number target option and an option for catch as many in a certian time
+
+sound effect credit:
+"Ambience, Night Wildlife, A.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org

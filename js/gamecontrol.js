@@ -8,7 +8,9 @@ let divs = [];
 let time = 0
 //loads start modal when page loads
 $(document).ready(_ => {
+  let backgroundSound = sound("background.wav");
   $("#startGame").show();
+  backgroundSound.play();
   chooseDifficulty();
 });
 //starts game

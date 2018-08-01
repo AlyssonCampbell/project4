@@ -6,11 +6,11 @@
 
 ## Start menu:
 
-![](css/img/start.png)
+![](css/img/start.PNG)
 
 ## Gameplay example:
 
-![](css/img/gameplay.png)
+![](css/img/gameplay.PNG)
 
 ## What is Firefly Catcher?
 

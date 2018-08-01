@@ -11,45 +11,47 @@
 </head>
 
 <body>
-  <audio id="background">
-    <source src="audio/background.wav" type="audio/mpeg">
-  </audio>
-  <div class="timer"></div>
-  <div class="game-board"></div>
-  <!-- got modal from https://www.w3schools.com/howto/howto_css_modals.asp -->
-  <!-- modal for start game -->
-  <div id="startGame" class="modal">
-    <!-- start modal content -->
-    <div class="modal-content">
-      <p>Ready to catch some fireflies?</p>
-      <!-- buttons to start game -->
-      <div class="difficulty">
-        <button type="button" id="easy">Easy</button>
-        <button type="button" id="medium">Medium</button>
-        <button type="button" id="hard">Hard</button>
+  <div class="container">
+    <audio id="background" loop="loop">
+      <source src="audio/background.wav" type="audio/mpeg">
+    </audio>
+    <div class="timer"></div>
+    <div class="game-board"></div>
+    <!-- got modal from https://www.w3schools.com/howto/howto_css_modals.asp -->
+    <!-- modal for start game -->
+    <div id="startGame" class="modal">
+      <!-- start modal content -->
+      <div class="modal-content">
+        <p>Ready to catch some fireflies?</p>
+        <!-- buttons to start game -->
+        <div class="difficulty">
+          <button type="button" id="easy">Easy</button>
+          <button type="button" id="medium">Medium</button>
+          <button type="button" id="hard">Hard</button>
+        </div>
       </div>
     </div>
-  </div>
-  <!-- modal for game end -->
-  <div id="endGame" class="modal">
-    <!-- close -->
-    <span class="close restart">&times;</span>
-    <!-- start modal content -->
-    <div class="modal-content">
-      <p>You caught
-        <span class="score"></span>
-        fireflies in
-        <span class="clock"></span> seconds!
-      </p>
-      <!-- button to start game -->
-      <button type="button" class="restart">Play Again?</button>
+    <!-- modal for game end -->
+    <div id="endGame" class="modal">
+      <!-- close -->
+      <span class="close restart">&times;</span>
+      <!-- start modal content -->
+      <div class="modal-content">
+        <p>You caught
+          <span class="score"></span>
+          fireflies in
+          <span class="clock"></span> seconds!
+        </p>
+        <!-- button to start game -->
+        <button type="button" class="restart">Play Again?</button>
+      </div>
     </div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="js/gamecontrol.js"></script>
-  <script src="js/display.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="js/gamecontrol.js"></script>
+    <script src="js/display.js"></script>
+  </div>
 </body>
 
 </html>

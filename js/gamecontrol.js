@@ -35,6 +35,7 @@ function setNumberOfDivs(value) {
 //referenced: https://medium.com/@ericschwartz7/adding-audio-to-your-app-with-jquery-fa96b99dfa97
 function startTheGame() {
   $("audio#background")[0].play();
+  //loop the sound
   $(".modal").hide();
   let height = $(window).height() - 100;
   let width = $(window).width() - 100;

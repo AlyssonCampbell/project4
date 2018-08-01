@@ -1,7 +1,7 @@
 //referenced: http://archive.oreilly.com/oreillyschool/courses/jquery/QuizzesAndProjects/Viewport_proj2.project.html
 //generates the divs in a random location to start
 function generateRandomDivs(height, width, divs) {
-  for (let i in divs) {
+  for (let i = 0; i < divs; i++) {
     let randomHeight = Math.floor(Math.random() * height);
     let randomWidth = Math.floor(Math.random() * width);
     $(`<div class='target' id="${i}"></div>`).appendTo(".game-board").css({
@@ -20,7 +20,7 @@ function moveDivs() {
 //referenced: https://stackoverflow.com/questions/10385950/how-to-get-a-div-to-randomly-move-around-a-page-using-jquery-or-css
 //referenced: https://www.w3schools.com/jquery/jquery_animate.asp
 function animateDivs() {
-  for (let i = 0; i < divs.length; i++) {
+  for (let i = 0; i < divs; i++) {
     //reads the window size to set the max area to move items within
     height = $(window).height() - 100;
     width = $(window).width() - 100;

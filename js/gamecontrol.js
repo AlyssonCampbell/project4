@@ -1,5 +1,5 @@
 let score = 0;
-let divs = [];
+let divs = 0;
 let time = 0
 //loads start modal when page loads
 $(document).ready(_ => {
@@ -30,7 +30,7 @@ function chooseDifficulty() {
 //gets the number of fireflies based on which difficulty was selected
 function setNumberOfDivs(value) {
   for (let i = 0; i < value; i++) {
-    divs.push(i);
+    divs++;
   };
 };
 //starts game
@@ -55,9 +55,9 @@ $(".restart").on("click", _ => {
   location.reload();
 });
 //pull out function to check if location clicked was a div for scoring:
-function checkLocation(evt, array) {
+function checkLocation(evt, total) {
   let locationClicked = evt.target.id;
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 0; i < total; i++) {
     if (parseInt(locationClicked) === i) {
       $(evt.target).remove();
       score++;
@@ -66,8 +66,8 @@ function checkLocation(evt, array) {
   checkWinner(divs);
 };
 //if score = divs.length then give game over
-function checkWinner(divs) {
-  if (parseInt(score) === divs.length) {
+function checkWinner(total) {
+  if (parseInt(score) === total) {
     let timeTotal = time;
     $("#endGame").show();
     $(".score").html(`${score}`);
@@ -80,6 +80,8 @@ function removeTimer() {
   $(".timer").remove();
 };
 
+//display a "stop game" button at the bottom of the page that runs the check winner function
+//when 5 fireflies are clicked, then add 5 more fireflies to the screen
 //TODO: make a function that gives a timed mode new fireflies on an interval
 // function addMoreDivs() {
 //   console.log(divs);

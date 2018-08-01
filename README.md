@@ -30,3 +30,5 @@ have a number target option and an option for catch as many in a certian time
 
 sound effect credit:
 "Ambience, Night Wildlife, A.wav" by InspectorJ (www.jshaw.co.uk) of Freesound.org
+
+using the TODO's within the code helped plan and track what I wanted to do. Also experimented with using the issues in my own git repo to update ideas outside of the code

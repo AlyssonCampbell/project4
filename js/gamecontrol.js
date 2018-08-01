@@ -3,18 +3,18 @@
 //https://stackoverflow.com/questions/41420075/jquery-move-div-around-screen
 //https://stackoverflow.com/questions/13784686/moving-an-image-randomly-around-a-page
 //https://tomelliott.com/jquery/tutorial-simple-jquery-bouncing-ball
+//https://medium.com/@ericschwartz7/adding-audio-to-your-app-with-jquery-fa96b99dfa97
 let score = 0;
 let divs = [];
 let time = 0
 //loads start modal when page loads
 $(document).ready(_ => {
-  let backgroundSound = sound("background.wav");
   $("#startGame").show();
-  backgroundSound.play();
   chooseDifficulty();
 });
 //starts game
 function startTheGame() {
+  $("audio#background")[0].play();
   $(".modal").hide();
   let height = $(window).height() - 100;
   let width = $(window).width() - 100;

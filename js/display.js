@@ -37,10 +37,3 @@ function startTimer() {
   time = time + 1;
   $(".timer").html(time);
 };
-//listens for background sound and if it stops, loop it again
-//referenced: https://stackoverflow.com/questions/3273552/html5-audio-looping
-// $("audio#background").bind("ended", _ => {
-//   $("audio#background").currentTime = 0;
-//   $("audio#background").play();
-// });
-// $("audio#background").play();

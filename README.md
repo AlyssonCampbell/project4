@@ -14,7 +14,7 @@
 
 ## What is Firefly Catcher?
 
-I was inspired to make a game where the player can listen to relaxing nightime sounds while collecting fireflies. This is mobile-freindly and simple to play. Easy mode generates 10 fireflies, medium 20 and hard 30. Once game begins, there is a looping sound of crickets.
+I was inspired to make a game where the player can listen to relaxing night time sounds while collecting fireflies. This is mobile-friendly and simple to play. Easy mode generates 10 fireflies, medium 20 and hard 30. Once game begins, there is a looping sound of crickets.
 
 ## Code Style:
 

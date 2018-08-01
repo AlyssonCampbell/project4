@@ -33,22 +33,7 @@ function animateDivs() {
   };
 };
 //displays the current time
-//TODO: make the time show minutes if needed
 function startTimer() {
   time = time + 1;
-  if (time > 60) {
-    //get math to display minutes & seconds
-  } else {
-    $(".timer").html(time);
-  }
-}
-
-//TODO:not yet working-would like to pull this function out so that I can DRY up the code
-// function getRandomLocation() {
-//   let height = $(window).height() - 100;
-//   let width = $(window).width() - 100;
-//   let randomHeight = Math.floor(Math.random() * height);
-//   let randomWidth = Math.floor(Math.random() * width);
-//   return randomHeight, randomWidth;
-// }
-//TODO: create a free-for-all mode that continually adds a firefly per set interval and the total time is set, game over when timer hits 0
+  $(".timer").html(time);
+};

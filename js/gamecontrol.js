@@ -23,9 +23,6 @@ function chooseDifficulty() {
       setNumberOfDivs(setDivs);
       startTheGame();
     };
-    // else if (evt.target === infinity) {
-    //   console.log("infinity mode")
-    // };
   });
 };
 //gets the number of fireflies based on which difficulty was selected
@@ -62,8 +59,6 @@ function checkLocation(evt, total) {
     if (parseInt(locationClicked) === i) {
       $(evt.target).remove();
       score++;
-      // divs++;
-      // replaceDiv();
     };
   };
   // infinityMode();
@@ -83,19 +78,3 @@ function checkWinner(total) {
 function removeTimer() {
   $(".timer").remove();
 };
-
-//display a "stop game" button at the bottom of the page that runs the check winner function
-//when 5 fireflies are clicked, then add 5 more fireflies to the screen
-//TODO: make a function that gives a timed mode new fireflies on an interval
-// function infinityMode() {
-//   console.log(divs);
-// };
-
-// function replaceDiv() {
-//   console.log(divs);
-//   generateRandomDivs(height, width, 1)
-//   let timer = setInterval(startTimer, 1000);
-//   for (let i = 0; i < divs; i++) {
-//     moveDivs();
-//   }
-// }

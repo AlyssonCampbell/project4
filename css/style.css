@@ -5,6 +5,7 @@ body {
   font-size: 4em;
   background-color: #141033;
 }
+/* TODO: get background color to be fullscreen gradient */
 
 .target {
   border-radius: 50px;
@@ -77,5 +78,3 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
-
-/* TODO: add button styling */

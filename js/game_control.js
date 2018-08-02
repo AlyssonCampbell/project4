@@ -13,25 +13,22 @@ function chooseDifficulty() {
     if (evt.target === easy) {
       let setFireflies = 10;
       setNumberOfFireflies(setFireflies);
-      startTheGame();
       playTheGame();
     } else if (evt.target === medium) {
       let setFireflies = 20;
       setNumberOfFireflies(setFireflies);
-      startTheGame();
       playTheGame();
     } else if (evt.target === hard) {
       let setFireflies = 30;
       setNumberOfFireflies(setFireflies);
-      startTheGame();
       playTheGame();
     } else if (evt.target === infinity) {
       let setFireflies = 15;
       setNumberOfFireflies(setFireflies);
-      startTheGame();
       addMoreFireflies();
       $(".stop").append("<button type='button' id='stop'>Stop</button>")
     };
+    startTheGame();
   });
 };
 //gets the number of fireflies based on which difficulty was selected

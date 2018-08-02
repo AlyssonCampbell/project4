@@ -14,14 +14,23 @@ function chooseDifficulty() {
       let setFireflies = 10;
       setNumberOfFireflies(setFireflies);
       startTheGame();
+      playTheGame();
     } else if (evt.target === medium) {
       let setFireflies = 20;
       setNumberOfFireflies(setFireflies);
       startTheGame();
+      playTheGame();
     } else if (evt.target === hard) {
       let setFireflies = 30;
       setNumberOfFireflies(setFireflies);
       startTheGame();
+      playTheGame();
+    } else if (evt.target === infinity) {
+      let setFireflies = 15;
+      setNumberOfFireflies(setFireflies);
+      startTheGame();
+      addMoreFireflies();
+      $(".stop").append("<button type='button' id='stop'>Stop</button>")
     };
   });
 };
@@ -31,7 +40,6 @@ function setNumberOfFireflies(value) {
     fireflies++;
   };
 };
-//starts game
 //referenced: https://medium.com/@ericschwartz7/adding-audio-to-your-app-with-jquery-fa96b99dfa97
 function startTheGame() {
   $("audio#background")[0].play();
@@ -44,16 +52,23 @@ function startTheGame() {
   moveFireflies(height, width);
 };
 //listen to the game board and if the div clicked is one of the id divs within the array, log a point and remove
-$(".game-board").on("click", evt => {
-  evt.preventDefault();
-  checkLocation(evt, fireflies);
-});
+function playTheGame() {
+  $(".game-board").on("click", evt => {
+    evt.preventDefault();
+    checkLocation(evt, fireflies);
+    gameOver(fireflies);
+  });
+}
 //listen for click to remove modal
 $(".restart").on("click", _ => {
   location.reload();
 });
 //pull out function to check if location clicked was a div for scoring:
 function checkLocation(evt, total) {
+  clickedFirefly(evt, total);
+};
+//function to remove fireflies when click and track number clicked
+function clickedFirefly(evt, total) {
   let locationClicked = evt.target.id;
   for (let i = 0; i < total; i++) {
     if (parseInt(locationClicked) === i) {
@@ -61,8 +76,12 @@ function checkLocation(evt, total) {
       score++;
     };
   };
-  gameOver(fireflies);
 };
+//stops the game when stop button clicked in infinity mode
+$(".stop").on("click", _ => {
+  $(".stop").remove();
+  gameOver(score);
+});
 //game over when all fireflies are caught
 function gameOver(total) {
   if (parseInt(score) === total) {

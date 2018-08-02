@@ -37,3 +37,16 @@ function startTimer() {
   time = time + 1;
   $(".timer").html(time);
 };
+//adding more fireflies when a firefly is clicked in infinity mode
+//TODO: currently it's not moving the newly added fireflies until all the inital ones are clicked
+//figure out how to move them all each time one is clicked, but they do eventually move!
+function addMoreFireflies() {
+  $(".game-board").on("click", evt => {
+    evt.preventDefault();
+    checkLocation(evt, fireflies);
+    let height = $(window).height() - 100;
+    let width = $(window).width() - 100;
+    generateRandomFireflies(height, width, 1);
+    moveFireflies(height, width);
+  });
+};

@@ -72,6 +72,7 @@ function clickedFirefly(evt, total) {
   let locationClicked = evt.target.id;
   for (let i = 0; i < total; i++) {
     if (parseInt(locationClicked) === i) {
+      $("audio#clicked")[0].play();
       $(evt.target).remove();
       score++;
     };

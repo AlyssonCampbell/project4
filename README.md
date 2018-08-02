@@ -34,7 +34,9 @@ Prettier
 
 ## Credit:
 
-[Sound effect credit: "Ambience, Night Wildlife, A.wav" by InspectorJ](https://www.jshaw.co.uk) of Freesound.org
+[Background Sound effect credit: "Ambience, Night Wildlife, A.wav" by InspectorJ](https://www.jshaw.co.uk) of Freesound.org
+
+[Clicked Sound effect credit: "drip.wav" by Nightflame](https://freesound.org/people/Nightflame/) of Freesound.org
 
 ## Copyright info:
 

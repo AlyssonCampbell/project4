@@ -72,7 +72,8 @@ button {
   transition: 0.3s;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
   color: #c3f53b;
   text-decoration: none;
   cursor: pointer;

@@ -8,6 +8,7 @@ function generateRandomFireflies(height, width, fireflies) {
       left: randomWidth
     });
   };
+  moveFireflies(height, width);
 };
 /*moves the divs on an interval
 referenced: https://www.w3schools.com/jsref/met_win_setinterval.asp*/
@@ -47,9 +48,7 @@ function convertTime(time) {
   minutes = Math.floor(time / 60);
   seconds = time % 60;
 }
-/*adding more fireflies when a firefly is clicked in infinity mode
-TODO: currently it's not moving the newly added fireflies until all the inital ones are clicked
-figure out how to move them all each time one is clicked, but they do eventually move!*/
+//adding more fireflies when a firefly is clicked in infinity mode they will be stationary until all moving ones have been clicked, then will animate
 function addMoreFireflies() {
   $(".game-board").on("click", evt => {
     evt.preventDefault();
@@ -57,6 +56,5 @@ function addMoreFireflies() {
     let height = $(window).height() - 100;
     let width = $(window).width() - 100;
     generateRandomFireflies(height, width, 1);
-    moveFireflies(height, width);
   });
 };

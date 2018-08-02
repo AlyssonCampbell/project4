@@ -1,5 +1,5 @@
 let score = 0;
-let divs = 0;
+let fireflies = 0;
 let time = 0
 //loads start modal when page loads
 $(document).ready(_ => {
@@ -11,24 +11,24 @@ $(document).ready(_ => {
 function chooseDifficulty() {
   $(".difficulty").on("click", evt => {
     if (evt.target === easy) {
-      let setDivs = 10;
-      setNumberOfDivs(setDivs);
+      let setFireflies = 10;
+      setNumberOfFireflies(setFireflies);
       startTheGame();
     } else if (evt.target === medium) {
-      let setDivs = 20;
-      setNumberOfDivs(setDivs);
+      let setFireflies = 20;
+      setNumberOfFireflies(setFireflies);
       startTheGame();
     } else if (evt.target === hard) {
-      let setDivs = 30;
-      setNumberOfDivs(setDivs);
+      let setFireflies = 30;
+      setNumberOfFireflies(setFireflies);
       startTheGame();
     };
   });
 };
 //gets the number of fireflies based on which difficulty was selected
-function setNumberOfDivs(value) {
+function setNumberOfFireflies(value) {
   for (let i = 0; i < value; i++) {
-    divs++;
+    fireflies++;
   };
 };
 //starts game
@@ -39,15 +39,15 @@ function startTheGame() {
   $(".modal").hide();
   let height = $(window).height() - 100;
   let width = $(window).width() - 100;
-  generateRandomDivs(height, width, divs);
+  generateRandomFireflies(height, width, fireflies);
   let timer = setInterval(startTimer, 1000);
-  moveDivs();
-  checkWinner(divs, timer);
+  moveFireflies();
+  checkWinner(fireflies, timer);
 };
 //listen to the game board and if the div clicked is one of the id divs within the array, log a point and remove
 $(".game-board").on("click", evt => {
   evt.preventDefault();
-  checkLocation(evt, divs);
+  checkLocation(evt, fireflies);
 });
 //listen for click to remove modal
 $(".restart").on("click", _ => {
@@ -62,8 +62,7 @@ function checkLocation(evt, total) {
       score++;
     };
   };
-  // infinityMode();
-  checkWinner(divs);
+  checkWinner(fireflies);
 };
 //if score = divs.length then give game over
 function checkWinner(total) {

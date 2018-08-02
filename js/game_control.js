@@ -1,13 +1,13 @@
 let score = 0;
 let fireflies = 0;
-let time = 0
+let time = 0;
 //loads start modal when page loads
 $(document).ready(_ => {
   $("#startGame").show();
   chooseDifficulty();
 });
-//sets the difficulty of the game
-//referenced: https://www.kirupa.com/html5/handling_events_for_many_elements.htm
+/*sets the difficulty of the game
+referenced: https://www.kirupa.com/html5/handling_events_for_many_elements.htm*/
 function chooseDifficulty() {
   $(".difficulty").on("click", evt => {
     if (evt.target === easy) {
@@ -87,9 +87,14 @@ $(".stop").on("click", _ => {
 function gameOver(total) {
   if (parseInt(score) === total) {
     let timeTotal = time;
+    if (timeTotal > 60) {
+      convertTime(timeTotal);
+      $(".clock").html(`${minutes} minute(s) & ${seconds} seconds`);
+    } else {
+      $(".clock").html(`${timeTotal} seconds`);
+    }
     $("#endGame").show();
     $(".score").html(`${score}`);
-    $(".clock").html(`${timeTotal}`);
     removeTimer();
   };
 };

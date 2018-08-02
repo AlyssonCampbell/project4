@@ -6,7 +6,7 @@
 
 ## Start menu:
 
-![](css/img/start.PNG)
+![](css/img/start.png)
 
 ## Gameplay example:
 

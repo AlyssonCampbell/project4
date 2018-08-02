@@ -40,9 +40,8 @@ function startTheGame() {
   let height = $(window).height() - 100;
   let width = $(window).width() - 100;
   generateRandomFireflies(height, width, fireflies);
-  let timer = setInterval(startTimer, 1000);
-  moveFireflies();
-  checkWinner(fireflies, timer);
+  setInterval(startTimer, 1000);
+  moveFireflies(height, width);
 };
 //listen to the game board and if the div clicked is one of the id divs within the array, log a point and remove
 $(".game-board").on("click", evt => {
@@ -62,10 +61,10 @@ function checkLocation(evt, total) {
       score++;
     };
   };
-  checkWinner(fireflies);
+  gameOver(fireflies);
 };
-//if score = divs.length then give game over
-function checkWinner(total) {
+//game over when all fireflies are caught
+function gameOver(total) {
   if (parseInt(score) === total) {
     let timeTotal = time;
     $("#endGame").show();

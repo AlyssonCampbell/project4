@@ -6,13 +6,15 @@ body {
   background-color: #141033;
 }
 
-.target {
+.fireflies {
   border-radius: 50px;
   position: absolute;
   height: 50px;
   width: 50px;
   animation: flash 2s infinite;
 }
+
+/* flash animation to make the fireflies blink */
 
 @keyframes flash {
   100% {
@@ -58,23 +60,4 @@ button {
   width: fit-content;
   height: fit-content;
   background: linear-gradient(#141033, #3A2696, #6A2F8D, #C222A6);
-}
-
-/* close button on modal*/
-
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #e4f0c4;
-  font-size: 100px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #c3f53b;
-  text-decoration: none;
-  cursor: pointer;
 }

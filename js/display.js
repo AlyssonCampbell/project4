@@ -3,7 +3,7 @@ generates the divs in a random location to start*/
 function generateRandomFireflies(height, width, fireflies) {
   for (let i = 0; i < fireflies; i++) {
     getRandomLocation(height, width);
-    $(`<div class='target' id="${i}"></div>`).appendTo(".game-board").css({
+    $(`<div class='fireflies' id="${i}"></div>`).appendTo(".game-board").css({
       top: randomHeight,
       left: randomWidth
     });

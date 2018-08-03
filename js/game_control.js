@@ -3,6 +3,7 @@ let fireflies = 0;
 let time = 0;
 //loads start modal when page loads
 $(document).ready(_ => {
+  $(".controls").hide();
   $("#startGame").show();
   chooseDifficulty();
 });
@@ -26,7 +27,7 @@ function chooseDifficulty() {
       let setFireflies = 15;
       setNumberOfFireflies(setFireflies);
       addMoreFireflies();
-      $(".stop").append("<button type='button' id='stop'>Stop</button>")
+      $(".controls").show()
     };
     startTheGame();
   });
@@ -76,8 +77,8 @@ function clickedFirefly(evt, total) {
   };
 };
 //stops the game when stop button clicked in infinity mode
-$(".stop").on("click", _ => {
-  $(".stop").remove();
+$("#stop").on("click", evt => {
+  $(".controls").remove();
   gameOver(score);
 });
 //game over when all fireflies are caught

@@ -36,7 +36,7 @@ function getRandomLocation(height, width) {
 //displays the current time
 function startTimer() {
   time = time + 1;
-  if (time > 60) {
+  if (time >= 60) {
     convertTime(time);
     $(".timer").html(minutes + ":" + seconds);
   } else {

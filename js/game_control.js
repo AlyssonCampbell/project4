@@ -11,19 +11,20 @@ $(document).ready(_ => {
 referenced: https://www.kirupa.com/html5/handling_events_for_many_elements.htm*/
 function chooseDifficulty() {
   $(".difficulty").on("click", evt => {
-    if (evt.target === easy) {
+    let location = evt.target;
+    if (location === easy) {
       let setFireflies = 10;
       setNumberOfFireflies(setFireflies);
       playTheGame();
-    } else if (evt.target === medium) {
+    } else if (location === medium) {
       let setFireflies = 20;
       setNumberOfFireflies(setFireflies);
       playTheGame();
-    } else if (evt.target === hard) {
+    } else if (location === hard) {
       let setFireflies = 30;
       setNumberOfFireflies(setFireflies);
       playTheGame();
-    } else if (evt.target === infinity) {
+    } else if (location === infinity) {
       let setFireflies = 15;
       setNumberOfFireflies(setFireflies);
       addMoreFireflies();
@@ -77,7 +78,7 @@ function clickedFirefly(evt, total) {
   };
 };
 //stops the game when stop button clicked in infinity mode
-$("#stop").on("click", evt => {
+$("#stop").on("click", _ => {
   $(".controls").remove();
   gameOver(score);
 });

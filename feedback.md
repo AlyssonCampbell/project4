@@ -14,8 +14,9 @@ was a good practice of your use of CSS.
 #### Deployment - (3)
 You project was successfully deployed using GH pages! Good job Alysson!
 
-#### Technical Requirements - (3)
-You met all of the technical requirements for this game, great work!
+#### Technical Requirements - (2)
+You met all of the technical requirements for this project, however there was just a small issue with your directory structure. You had placed your images directory inside of the CSS directory, which is something that could cause potential
+issues later on. For these kinds of projects, always ensure your images directory is at the same level as your CSS and JS directories.
 
 #### Creativity and Interface - (3)
 
@@ -35,4 +36,4 @@ Thank you for your contributions to the course Alysson! We wish you the very bes
 Always remember the learning stage never stops, so keep approaching the next stages with an empty cup!
 
 #### Score
-17/18
+16/18
